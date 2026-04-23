@@ -359,6 +359,12 @@ export function AzureProvider({ children }: { children: ReactNode }) {
               if (backendId && backendMap.has(backendId)) {
                 return { ...api, backendId, providerType: backendMap.get(backendId)!, tags } as InferenceApi;
               }
+              // Fallback: treat APIs tagged "inference" as inference APIs even when the
+              // backend cannot be statically resolved (e.g. dynamic set-backend-service).
+              const hasInferenceTag = tags.some((t) => t.name.toLowerCase() === 'inference');
+              if (hasInferenceTag) {
+                return { ...api, backendId: backendId ?? '', providerType: 'unknown', tags } as InferenceApi;
+              }
               return null;
             }),
           );
