@@ -1,0 +1,17 @@
+- generic [ref=e4]:
+  - heading "AI Gateway Dev Portal" [level=1] [ref=e6]
+  - paragraph [ref=e7]: Sign in with your Azure credentials to access Models, MCP servers, A2A and more.
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - text: "Run in a terminal to get your token:"
+      - generic [ref=e22]:
+        - code [ref=e23]: az account get-access-token --query accessToken -o tsv
+        - button "Copy command" [ref=e24] [cursor=pointer]:
+          - img [ref=e25]
+    - textbox "Paste your Azure access token here…" [ref=e28]
+    - generic [ref=e29]:
+      - button "Sign in" [disabled] [ref=e30]:
+        - img [ref=e31]
+        - text: Sign in
+      - button "Back to sign-in options" [ref=e33] [cursor=pointer]
+  - paragraph [ref=e19]: Powered by Azure API Management

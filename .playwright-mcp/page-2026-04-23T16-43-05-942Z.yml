@@ -1,0 +1,13 @@
+- generic [ref=e4]:
+  - heading "AI Gateway Dev Portal" [level=1] [ref=e6]
+  - paragraph [ref=e7]: Sign in with your Azure credentials to access Models, MCP servers, A2A and more.
+  - generic [ref=e8]:
+    - button "Sign in with SSO" [ref=e9] [cursor=pointer]:
+      - img [ref=e10]
+      - text: Sign in with SSO
+    - button "Select tenant" [ref=e13] [cursor=pointer]:
+      - img [ref=e14]
+  - button "Sign in with access token" [ref=e16] [cursor=pointer]:
+    - img [ref=e17]
+    - text: Sign in with access token
+  - paragraph [ref=e19]: Powered by Azure API Management
